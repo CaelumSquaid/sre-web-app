@@ -16,9 +16,9 @@ module.exports = {
       },
     },
     extend: {
-      backgroundImage: {
-        'hero-image': "url('/hero-background.jpg')",
-      },
+      // backgroundImage: {
+      //   'hero-image': "url('/hero-background.jpg')",
+      // },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

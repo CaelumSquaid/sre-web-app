@@ -1,5 +1,5 @@
 import React from "react";
-// import cloudinary from "cloudinary";
+import cloudinary from "cloudinary";
 // import Carousel from "@/components/ui/carousel";
 import QuoteForm from "@/components/EmailForm";
 
@@ -11,10 +11,10 @@ type Images = {
 };
 
 async function Gallery() {
-  // const images: Images = await cloudinary.v2.search
-  //   .expression("resource_type:image AND folder=products")
-  //   .sort_by("public_id", "desc")
-  //   .execute();
+  const images: Images = await cloudinary.v2.search
+    .expression("resource_type:image AND folder=products")
+    .sort_by("public_id", "desc")
+    .execute()
 
   return (
     <section

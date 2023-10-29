@@ -1,6 +1,6 @@
 import React from "react";
 import cloudinary from "cloudinary";
-// import Carousel from "@/components/ui/carousel";
+import Carousel from "@/components/ui/carousel";
 import QuoteForm from "@/components/EmailForm";
 
 type Images = {
@@ -11,7 +11,7 @@ type Images = {
 };
 
 async function Gallery() {
-  const images: any = await cloudinary.v2.search
+  const images: Images = await cloudinary.v2.search
     .expression("resource_type:image AND folder=products")
     .sort_by("public_id", "desc")
     .execute()
@@ -21,9 +21,9 @@ async function Gallery() {
       id="gallery"
       className="w-full gap-6 py-44 flex flex-col items-center justify-center bg-white lg:px-36 xl:flex-row md:px-24 px-6"
     >
-      {/* <div className="w-full xl:w-1/2">
+      <div className="w-full xl:w-1/2">
         <Carousel images={images.resources} />
-      </div> */}
+      </div>
       <div className="w-1/2 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-black mb-6">Send us an Email</h1>
         <p className="my-4 text-sm">

@@ -1,6 +1,6 @@
-import AboutUs from "@/app/AboutUs";
+import AboutUs from "@/components/AboutUs";
 import ContactUs from "@/components/ContactUs";
-import Gallery from "@/app/Gallery";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (

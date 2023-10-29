@@ -11,7 +11,7 @@ type Images = {
 };
 
 async function Gallery() {
-  const images: Images = await cloudinary.v2.search
+  const images: any = await cloudinary.v2.search
     .expression("resource_type:image AND folder=products")
     .sort_by("public_id", "desc")
     .execute()

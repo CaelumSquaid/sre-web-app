@@ -1,14 +1,13 @@
-import AboutUs from "@/components/AboutUs";
-import Footer from "@/components/Footer";
-import Products from "@/components/Products";
-import Image from "next/image";
+import AboutUs from "@/app/AboutUs";
+import ContactUs from "@/components/ContactUs";
+import Gallery from "@/app/Gallery";
 
 export default function Home() {
   return (
     <>
       <AboutUs />
-      <Products /> 
-      <Footer />
+      <Gallery />  
+      <ContactUs />
     </>
   );
 }

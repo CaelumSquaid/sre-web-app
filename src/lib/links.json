@@ -1,0 +1,14 @@
+[
+    {
+        "href":"#aboutUs",
+        "display":"About Us"
+    },
+    {
+        "href":"#gallery",
+        "display":"Gallery"
+    },
+    {
+        "href":"#contactUs",
+        "display":"Contact Us"
+    }
+]

@@ -26,6 +26,7 @@ function Carousel({ images }: { images: any[] }) {
             height={600}
             className="h-96 w-full object-cover object-center rounded"
             src={image.public_id}
+            
           />
         </div>
       ))}

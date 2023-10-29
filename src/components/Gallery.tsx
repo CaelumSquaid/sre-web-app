@@ -21,9 +21,9 @@ async function Gallery() {
       id="gallery"
       className="w-full gap-6 py-44 flex flex-col items-center justify-center bg-white lg:px-36 xl:flex-row md:px-24 px-6"
     >
-      <div className="w-full xl:w-1/2">
+      {/* <div className="w-full xl:w-1/2">
         <Carousel images={images.resources} />
-      </div>
+      </div> */}
       <div className="w-1/2 flex flex-col items-center justify-center">
         <h1 className="text-4xl font-black mb-6">Send us an Email</h1>
         <p className="my-4 text-sm">

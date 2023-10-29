@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 
 export const sendEmail = async (values: FieldValues) => {
-    resend.emails.send({
+    return await resend.emails.send({
         from: "Quotation Request <onboarding@resend.dev>",
         reply_to: values.email,
         to: "questerkreg.dev@gmail.com",

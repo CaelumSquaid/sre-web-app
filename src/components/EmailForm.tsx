@@ -18,19 +18,29 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { sendEmail } from "@/lib/sendEmail";
+import { useToast } from "./ui/use-toast";
 
 const formSchema = z.object({
   email: z.string().email("Must be a valid email format"),
 });
 
 export function EmailForm() {
+  const {toast} = useToast()
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
   const handleSubmit = async (values: FieldValues) => {
-    await sendEmail(values);
-    // alert(JSON.stringify(values, null, 2))
+    const status = await sendEmail(values);
+    console.log(status)
+    status ? toast({
+      title: "Success",
+      description: "Successfully sent email"
+    }) : toast({
+      title: "Oh Snap! Something went wrong",
+      description: "You can directly contact SRE thru phone, Sorry for the inconvenience"
+    })
   };
 
   return (

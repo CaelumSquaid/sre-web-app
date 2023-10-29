@@ -5,10 +5,10 @@ import React from "react";
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <>
       <AboutUs />
-      <Gallery />  
+      {/* <Gallery />   */}
       <ContactUs />
-    </React.Fragment>
+    </>
   );
 }
